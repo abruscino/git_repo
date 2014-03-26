@@ -32,6 +32,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${perfilInstance?.menus}">
+				<li class="fieldcontain">
+					<span id="menus-label" class="property-label"><g:message code="perfil.menus.label" default="Menus" /></span>
+					
+						<g:each in="${perfilInstance.menus}" var="m">
+						<span class="property-value" aria-labelledby="menus-label"><g:link controller="menu" action="show" id="${m.id}">${m?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:perfilInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

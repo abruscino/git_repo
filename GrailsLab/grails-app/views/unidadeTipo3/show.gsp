@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${unidadeTipo3Instance?.uoii}">
+				<li class="fieldcontain">
+					<span id="uoii-label" class="property-label"><g:message code="unidadeTipo3.uoii.label" default="Uoii" /></span>
+					
+						<span class="property-value" aria-labelledby="uoii-label"><g:link controller="unidadeTipo2" action="show" id="${unidadeTipo3Instance?.uoii?.id}">${unidadeTipo3Instance?.uoii?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:unidadeTipo3Instance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

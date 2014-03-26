@@ -26,6 +26,16 @@
 					
 						<g:sortableColumn property="nome" title="${message(code: 'menu.nome.label', default: 'Nome')}" />
 					
+						<g:sortableColumn property="actionListener" title="${message(code: 'menu.actionListener.label', default: 'Action Listener')}" />
+					
+						<g:sortableColumn property="url" title="${message(code: 'menu.url.label', default: 'Url')}" />
+					
+						<g:sortableColumn property="icon" title="${message(code: 'menu.icon.label', default: 'Icon')}" />
+					
+						<g:sortableColumn property="sequencia" title="${message(code: 'menu.sequencia.label', default: 'Sequencia')}" />
+					
+						<th><g:message code="menu.pai.label" default="Pai" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +43,16 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${menuInstance.id}">${fieldValue(bean: menuInstance, field: "nome")}</g:link></td>
+					
+						<td>${fieldValue(bean: menuInstance, field: "actionListener")}</td>
+					
+						<td>${fieldValue(bean: menuInstance, field: "url")}</td>
+					
+						<td>${fieldValue(bean: menuInstance, field: "icon")}</td>
+					
+						<td>${fieldValue(bean: menuInstance, field: "sequencia")}</td>
+					
+						<td>${fieldValue(bean: menuInstance, field: "pai")}</td>
 					
 					</tr>
 				</g:each>

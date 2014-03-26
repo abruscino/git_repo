@@ -32,6 +32,51 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${menuInstance?.actionListener}">
+				<li class="fieldcontain">
+					<span id="actionListener-label" class="property-label"><g:message code="menu.actionListener.label" default="Action Listener" /></span>
+					
+						<span class="property-value" aria-labelledby="actionListener-label"><g:fieldValue bean="${menuInstance}" field="actionListener"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${menuInstance?.url}">
+				<li class="fieldcontain">
+					<span id="url-label" class="property-label"><g:message code="menu.url.label" default="Url" /></span>
+					
+						<span class="property-value" aria-labelledby="url-label"><g:fieldValue bean="${menuInstance}" field="url"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${menuInstance?.icon}">
+				<li class="fieldcontain">
+					<span id="icon-label" class="property-label"><g:message code="menu.icon.label" default="Icon" /></span>
+					
+						<span class="property-value" aria-labelledby="icon-label"><g:fieldValue bean="${menuInstance}" field="icon"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${menuInstance?.sequencia}">
+				<li class="fieldcontain">
+					<span id="sequencia-label" class="property-label"><g:message code="menu.sequencia.label" default="Sequencia" /></span>
+					
+						<span class="property-value" aria-labelledby="sequencia-label"><g:fieldValue bean="${menuInstance}" field="sequencia"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${menuInstance?.pai}">
+				<li class="fieldcontain">
+					<span id="pai-label" class="property-label"><g:message code="menu.pai.label" default="Pai" /></span>
+					
+						<span class="property-value" aria-labelledby="pai-label"><g:link controller="menu" action="show" id="${menuInstance?.pai?.id}">${menuInstance?.pai?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:menuInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
