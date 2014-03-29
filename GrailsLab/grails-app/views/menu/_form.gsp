@@ -47,12 +47,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: menuInstance, field: 'pai', 'error')} ">
-	<label for="pai">
-		<g:message code="menu.pai.label" default="Pai" />
+<div class="fieldcontain ${hasErrors(bean: menuInstance, field: 'menuPai', 'error')} ">
+	<label for="menuPai">
+		<g:message code="menu.menuPai.label" default="Menu Pai" />
 		
 	</label>
-	<g:select id="pai" name="pai.id" from="${grailslab.Menu.list()}" optionKey="id" value="${menuInstance?.pai?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="menuPai" name="menuPai.id" from="${grailslab.Menu.list()}" optionKey="id" value="${menuInstance?.menuPai?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

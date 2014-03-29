@@ -7,7 +7,11 @@ class Menu {
 	String url
 	String icon
 	Integer sequencia
-	Menu pai
+	static belongsTo = [menuPai : Menu]
+	
+	static mapping = {
+		menuPai				lazy: false
+	}
 	
     static constraints = {
 		nome				nullable: true
@@ -15,7 +19,7 @@ class Menu {
 		url					nullable: true
 		icon				nullable: true
 		sequencia			nullable: true
-		pai					nullable: true
+		menuPai				nullable: true
     }
 	
 	public String toString() {

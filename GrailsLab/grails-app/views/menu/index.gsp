@@ -34,7 +34,7 @@
 					
 						<g:sortableColumn property="sequencia" title="${message(code: 'menu.sequencia.label', default: 'Sequencia')}" />
 					
-						<th><g:message code="menu.pai.label" default="Pai" /></th>
+						<th><g:message code="menu.menuPai.label" default="Menu Pai" /></th>
 					
 					</tr>
 				</thead>
@@ -52,7 +52,7 @@
 					
 						<td>${fieldValue(bean: menuInstance, field: "sequencia")}</td>
 					
-						<td>${fieldValue(bean: menuInstance, field: "pai")}</td>
+						<td>${fieldValue(bean: menuInstance, field: "menuPai")}</td>
 					
 					</tr>
 				</g:each>

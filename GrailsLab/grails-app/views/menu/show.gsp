@@ -68,11 +68,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${menuInstance?.pai}">
+				<g:if test="${menuInstance?.menuPai}">
 				<li class="fieldcontain">
-					<span id="pai-label" class="property-label"><g:message code="menu.pai.label" default="Pai" /></span>
+					<span id="menuPai-label" class="property-label"><g:message code="menu.menuPai.label" default="Menu Pai" /></span>
 					
-						<span class="property-value" aria-labelledby="pai-label"><g:link controller="menu" action="show" id="${menuInstance?.pai?.id}">${menuInstance?.pai?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="menuPai-label"><g:link controller="menu" action="show" id="${menuInstance?.menuPai?.id}">${menuInstance?.menuPai?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
